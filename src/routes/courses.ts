@@ -98,7 +98,7 @@ export async function createCoursesHandler(
     return next(new Error('unable to create course'));
   }
 
-  return res.json(courseMapper(createdCourse));
+  return res.json(createdCourse);
 }
 
 const courseFields = ['courseId', 'title', 'level', 'url', 'semester', 'units'];
